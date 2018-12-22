@@ -1,0 +1,12 @@
+extends index.pug
+
+block content
+    .container(style='margin-top: 243px; max-width: 296px;')
+        .card.text-white.bg-dark.mb-3
+            .card-header(style='text-align: center; font-size: 18px;') Enter Username
+            .card-body
+                form.form-inline(action='/hello', method='post', style='text-align: center; align-items: center; display: flex; justify-content: center;')
+                    .form-group.mx-sm-3
+                        input#inputPassword2.form-control(type='text', placeholder='Username', name='username')
+                    button.btn(type='submit', style='margin-top: 22px; background-color: #396b66; color: #fcfcfc; font-size: 19px;') Submit
+    .container

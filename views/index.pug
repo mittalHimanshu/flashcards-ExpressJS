@@ -1,0 +1,13 @@
+doctype html
+include includes/header.pug
+body(style='background-color: #21ae6d;')
+    if name
+        .container(style='margin-top: 272px; max-width: 352px;')
+            .card.border-light.mb-3
+                .card-header Welcome #{name}
+                .card-body(style='display: flex; align-items: center; justify-content: center;')
+                    form.form-inline(style='display: block;', action='/goodbye', method='post')
+                        a(href='/cards')
+                            button.btn.btn-primary.bg-success.font-weight-bold(type='button', style='margin-right: 32px; width: 100%;') Begin
+                        button.btn.btn-primary.bg-dark.font-weight-bold(type='submit', style='margin-top: 16px; display: block; width: 100%;') GoodBye
+    block content

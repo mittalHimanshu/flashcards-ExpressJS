@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+    .container(style='margin-top: 150px; max-width: 504px;')
+      .card.text-center
+        .card-body
+            h4.card-title #{text}
+            if hint
+                p.card-text #{hint}
+            a.btn.btn-primary(href=`${id}?side=${sideToShow}`, style='margin-right: 64px; width: 100px;')= sideToShowDisplay
+            a.btn.btn-primary(href='/cards', style='width: 100px;') Next Card

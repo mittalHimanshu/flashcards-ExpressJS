@@ -1,0 +1,10 @@
+doctype html
+include includes/header.pug
+body(style='background-color: #21ae6d;')
+    .container-fluid
+        nav.navbar.navbar-expand-lg.navbar-light
+            .container
+                a.navbar-brand.text-white(href='') #{name}
+                form(action='/goodbye', method='post')
+                    button.btn.btn-dark(type='submit') Logout
+    block content
